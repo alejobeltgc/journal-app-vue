@@ -1,16 +1,22 @@
 import { createRouter, createWebHashHistory } from "vue-router"
+import daybookRouter from '../modules/daybook/router/'
 
 
 const routes = [
   { 
     path: '/',
     name: 'Home', 
-    component: () => import('../pages/Home.vue')
+    component: () => import('../views/Home.vue')
   },
   { 
     path: '/about',
     name: 'About', 
-    component: () => import('../pages/About.vue') 
+    component: () => import('../views/About.vue') 
+  },
+  
+  {
+    path: '/daybook',
+    ...daybookRouter
   },
 ]
 
